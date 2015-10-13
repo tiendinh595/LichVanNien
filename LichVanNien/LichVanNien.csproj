@@ -92,6 +92,36 @@
     </None>
     <AppDesigner Include="Properties\" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\0.png" />
+    <Resource Include="Images\1.png" />
+    <Resource Include="Images\2.png" />
+    <Resource Include="Images\3.png" />
+    <Resource Include="Images\4.png" />
+    <Resource Include="Images\5.png" />
+    <Resource Include="Images\6.png" />
+    <Resource Include="Images\7.png" />
+    <Resource Include="Images\8.png" />
+    <Resource Include="Images\9.png" />
+    <Resource Include="Images\background.png" />
+    <Resource Include="Images\giap0.png" />
+    <Resource Include="Images\giap1.png" />
+    <Resource Include="Images\giap10.png" />
+    <Resource Include="Images\giap11.png" />
+    <Resource Include="Images\giap2.png" />
+    <Resource Include="Images\giap3.png" />
+    <Resource Include="Images\giap4.png" />
+    <Resource Include="Images\giap5.png" />
+    <Resource Include="Images\giap6.png" />
+    <Resource Include="Images\giap7.png" />
+    <Resource Include="Images\giap8.png" />
+    <Resource Include="Images\giap9.png" />
+    <Resource Include="Images\line.png" />
+    <Resource Include="Images\Next.png" />
+    <Resource Include="Images\Prev.png" />
+    <Resource Include="Images\tuvi_12_center.png" />
+    <Resource Include="Images\tuvi_12_circle.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

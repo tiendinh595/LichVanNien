@@ -34,8 +34,13 @@
                 </Grid.ColumnDefinitions>
                 
                 <TextBlock Grid.Column="1" Text="Thu 4" FontSize="24" Foreground="White" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
-                <Image Grid.Row="1" Source="Images/Prev.png" Height="50" VerticalAlignment="Top" HorizontalAlignment="Right"></Image>
-                <Image Grid.Row="1"  Grid.Column="2" Source="Images/Next.png" Height="50" VerticalAlignment="Top" HorizontalAlignment="Left"></Image>
+                <Image Grid.Row="1" Source="Images/Prev.png" Height="50" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0 20 0 0"></Image>
+
+                <StackPanel Grid.Row="1"  Grid.Column="1" Orientation="Horizontal" Height="80">
+                    <Image Source="Images/0.png" Height="50"/>
+                </StackPanel>
+                
+                <Image Grid.Row="1"  Grid.Column="2" Source="Images/Next.png" Height="50" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0 20 0 0"></Image>
             </Grid>
         </Grid>
         

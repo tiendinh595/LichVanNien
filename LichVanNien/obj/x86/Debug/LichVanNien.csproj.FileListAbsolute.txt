@@ -11,3 +11,15 @@ D:\LichVanNien\LichVanNien\obj\x86\Debug\GenerateResource.read.1.tlog
 D:\LichVanNien\LichVanNien\obj\x86\Debug\GenerateResource.write.1.tlog
 D:\LichVanNien\LichVanNien\obj\x86\Debug\LichVanNien.exe
 D:\LichVanNien\LichVanNien\obj\x86\Debug\LichVanNien.pdb
+E:\PROGRAMING\WPF\LichVanNien\LichVanNien\obj\x86\Debug\LichVanNien.exe
+E:\PROGRAMING\WPF\LichVanNien\LichVanNien\obj\x86\Debug\LichVanNien.pdb
+E:\PROGRAMING\WPF\LichVanNien\LichVanNien\bin\Debug\LichVanNien.exe
+E:\PROGRAMING\WPF\LichVanNien\LichVanNien\bin\Debug\LichVanNien.pdb
+E:\PROGRAMING\WPF\LichVanNien\LichVanNien\obj\x86\Debug\LichVanNien.csprojResolveAssemblyReference.cache
+E:\PROGRAMING\WPF\LichVanNien\LichVanNien\obj\x86\Debug\MainWindow.baml
+E:\PROGRAMING\WPF\LichVanNien\LichVanNien\obj\x86\Debug\MainWindow.g.cs
+E:\PROGRAMING\WPF\LichVanNien\LichVanNien\obj\x86\Debug\App.g.cs
+E:\PROGRAMING\WPF\LichVanNien\LichVanNien\obj\x86\Debug\LichVanNien_MarkupCompile.cache
+E:\PROGRAMING\WPF\LichVanNien\LichVanNien\obj\x86\Debug\LichVanNien.g.resources
+E:\PROGRAMING\WPF\LichVanNien\LichVanNien\obj\x86\Debug\LichVanNien.Properties.Resources.resources
+E:\PROGRAMING\WPF\LichVanNien\LichVanNien\obj\x86\Debug\LichVanNien.csproj.GenerateResource.Cache

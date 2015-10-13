@@ -4,17 +4,18 @@
         Title="MainWindow" Height="600" Width="943"
         WindowStyle="None" AllowsTransparency="True"
         MouseLeftButtonDown="Window_MouseLeftButtonDown" KeyDown="Window_KeyDown" WindowStartupLocation="CenterScreen"
+        Loaded="Window_Loaded"
         >
     <Window.Background>
         <ImageBrush ImageSource="Images/background.png"></ImageBrush>
     </Window.Background>
-    <Grid ShowGridLines="True">
+    <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
         
-        <Grid Name="grdLeft" ShowGridLines="True">
+        <Grid Name="grdLeft" Margin="20 10 0 0">
             <Grid.RowDefinitions>
                 <RowDefinition Height="350"/>
                 <RowDefinition Height="100" />
@@ -22,30 +23,101 @@
                 <RowDefinition />
             </Grid.RowDefinitions>
             
-            <Grid ShowGridLines="True" Margin="10 10 0 0">
+            <Grid Margin="10 10 0 0">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="130"/>
                     <RowDefinition />
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="90"/>
+                    <ColumnDefinition Width="75"/>
                     <ColumnDefinition />
-                    <ColumnDefinition Width="90"/>
+                    <ColumnDefinition Width="75"/>
                 </Grid.ColumnDefinitions>
                 
-                <TextBlock Grid.Column="1" Text="Thu 4" FontSize="24" Foreground="White" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
-                <Image Grid.Row="1" Source="Images/Prev.png" Height="50" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0 20 0 0"></Image>
+                <TextBlock Name="tblThu" Grid.Column="1" Text="Thứ " FontSize="24" Foreground="White" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
+                <Image Name="imgPrev" Grid.Row="1" Source="Images/Prev.png" Height="50" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0 20 0 0" Opacity="0.8" MouseLeftButtonDown="imgPrev_MouseLeftButtonDown"></Image>
 
-                <StackPanel Grid.Row="1"  Grid.Column="1" Orientation="Horizontal" Height="80">
-                    <Image Source="Images/0.png" Height="50"/>
+                <StackPanel Grid.Row="1"  Grid.Column="1" Orientation="Horizontal" Height="100" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0 30 0 0" Name="stpNgay" Tag="1">
+                    <Image Source="Images/0.png" Height="100" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    <Image Source="Images/1.png" Height="100" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10 0 0 0"/>
                 </StackPanel>
+
+                <Image Name="imgNext" Grid.Row="1"  Grid.Column="2" Source="Images/Next.png" Height="50" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0 20 0 0" Opacity="0.8" MouseLeftButtonDown="imgNext_MouseLeftButtonDown"></Image>
+            </Grid>
+            <TextBlock Grid.Row="1" Text="Phải tôn kính thầy dạy mình , vì cha mẹ cho ta sự sống thì chính người thày dạy ta cho ta phong cách sống đàng hoàng tử tế" Foreground="DarkRed" FontSize="20" TextWrapping="WrapWithOverflow" Margin="10"/>
+            <Image Source="Images/Line.png" Grid.Row="2" />
+
+            <Grid Grid.Row="3">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition />
+                </Grid.RowDefinitions>
                 
-                <Image Grid.Row="1"  Grid.Column="2" Source="Images/Next.png" Height="50" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0 20 0 0"></Image>
+                <TextBlock Grid.Row="0" Grid.Column="0" Text="Giờ" Foreground="DarkRed" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="18" FontWeight="Bold" />
+                <TextBlock Grid.Row="0" Grid.Column="1" Text="Ngày" Foreground="DarkRed" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="18" FontWeight="Bold" />
+                <TextBlock Grid.Row="0" Grid.Column="2" Text="Tháng" Foreground="DarkRed" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="18" FontWeight="Bold" />
+                <TextBlock Grid.Row="0" Grid.Column="3" Text="Năm" Foreground="DarkRed" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="18" FontWeight="Bold" />
+
+                <TextBlock Name="tblGio" Grid.Row="1" Grid.Column="0" Text="22:22 PM" Foreground="DarkRed" VerticalAlignment="Top" HorizontalAlignment="Center" FontSize="18" />
+                <TextBlock Name="tblNgay2" Grid.Row="1" Grid.Column="1" Text="13" Foreground="DarkRed" VerticalAlignment="Top" HorizontalAlignment="Center" FontSize="18" />
+                <TextBlock Name="tblThang" Grid.Row="1" Grid.Column="2" Text="10" Foreground="DarkRed" VerticalAlignment="Top" HorizontalAlignment="Center" FontSize="18"/>
+                <TextBlock Name="tblNam" Grid.Row="1" Grid.Column="3" Text="2015" Foreground="DarkRed" VerticalAlignment="Top" HorizontalAlignment="Center" FontSize="18"/>
+
             </Grid>
         </Grid>
         
-        <Grid Name="grdRight">
-
+        <Grid Name="grdRight" Grid.Column="1" Margin="0 20 20 0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="350" />
+                <RowDefinition Height="21"/>
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            
+            <Grid>
+                <Image Source="Images/tuvi_12_circle.png" Height="290" />
+                <Image Source="Images/tuvi_12_center.png" Height="100" />
+                <Image Source="Images/Giap0.png" Margin="202,30,0,0" Height="45" HorizontalAlignment="Left" VerticalAlignment="Top" Tag="Tý" MouseLeftButtonDown="Image_MouseLeftButtonDown"/>
+                <Image Source="Images/Giap1.png" Margin="252,52,0,0" Height="45" HorizontalAlignment="Left" VerticalAlignment="Top" Tag="Sửu" MouseLeftButtonDown="Image_MouseLeftButtonDown"/>
+                <Image Source="Images/Giap2.png" Margin="297,97,0,0" Height="45" HorizontalAlignment="Left" VerticalAlignment="Top" Tag="Dần" MouseLeftButtonDown="Image_MouseLeftButtonDown"/>
+                <Image Source="Images/Giap3.png" Margin="312,147,0,0" Height="45" HorizontalAlignment="Left" VerticalAlignment="Top" Tag="Mão" MouseLeftButtonDown="Image_MouseLeftButtonDown"/>
+                <Image Source="Images/Giap4.png" Margin="297,209,0,0" Height="45" HorizontalAlignment="Left" VerticalAlignment="Top" Tag="Thìn" MouseLeftButtonDown="Image_MouseLeftButtonDown"/>
+                <Image Source="Images/Giap5.png" Margin="252,230,0,0" Height="45" HorizontalAlignment="Left" VerticalAlignment="Top" Tag="Tỵ" MouseLeftButtonDown="Image_MouseLeftButtonDown"/>
+                <Image Source="Images/Giap6.png" Margin="202,258,0,0" Height="45" HorizontalAlignment="Left" VerticalAlignment="Top" Tag="Ngọ" MouseLeftButtonDown="Image_MouseLeftButtonDown"/>
+                <Image Source="Images/Giap7.png" Margin="152,240,0,0" Height="45" HorizontalAlignment="Left" VerticalAlignment="Top" Tag="Mùi" MouseLeftButtonDown="Image_MouseLeftButtonDown"/>
+                <Image Source="Images/Giap8.png" Margin="108,206,0,0" Height="45" HorizontalAlignment="Left" VerticalAlignment="Top" Tag="Thân" MouseLeftButtonDown="Image_MouseLeftButtonDown"/>
+                <Image Source="Images/Giap9.png" Margin="95,150,0,0" Height="45" HorizontalAlignment="Left" VerticalAlignment="Top" Tag="Dậu" MouseLeftButtonDown="Image_MouseLeftButtonDown"/>
+                <Image Source="Images/Giap10.png" Margin="115,95,0,0" Height="45" HorizontalAlignment="Left" VerticalAlignment="Top" Tag="Tuất" MouseLeftButtonDown="Image_MouseLeftButtonDown"/>
+                <Image Source="Images/Giap11.png" Margin="151,52,0,0" Height="45" HorizontalAlignment="Left" VerticalAlignment="Top" Tag="Hợi" MouseLeftButtonDown="Image_MouseLeftButtonDown"/>
+            </Grid>
+            <Image Grid.Row="1" Source="Images/Line.png" />
+            <Grid Grid.Row="2" Margin="10 0 0 0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="3*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="25"/>
+                    <RowDefinition Height="25" />
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <TextBlock Text="Chọn tuổi:" Foreground="DarkRed" VerticalAlignment="Center" FontSize="16" />
+                <TextBlock Grid.Column="1" Text="Giáp Tý" Foreground="DarkRed" VerticalAlignment="Center" FontSize="16" Name="tblGiap"/>
+                <TextBlock Grid.Row="1" Grid.Column="0" Text="Giới tính:" Foreground="DarkRed" VerticalAlignment="Center" FontSize="16" />
+                <RadioButton Grid.Row="1" Grid.Column="1" Background="Yellow"  VerticalAlignment="Center" BorderBrush="DarkRed">
+                    <TextBlock Text="Nữ" Foreground="DarkRed" FontSize="16" />
+                </RadioButton>
+                <RadioButton Grid.Row="1" Grid.Column="1" Background="Yellow"  VerticalAlignment="Center" BorderBrush="DarkRed" Margin="80 0 0 0">
+                    <TextBlock Text="Nam" Foreground="DarkRed" FontSize="16"/>
+                </RadioButton>
+                <TextBlock Grid.Row="2" Grid.Column="0" Text="Lời cầu tự" Foreground="DarkRed" VerticalAlignment="Top" FontSize="16" />
+                <TextBox Grid.Column="2" Grid.Row="2" Margin="0 0 0 20" Background="Transparent" BorderBrush="Transparent" Foreground="DarkRed" FontSize="16"/>
+            </Grid>
         </Grid>
     </Grid>
 </Window>

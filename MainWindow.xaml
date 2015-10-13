@@ -1,0 +1,51 @@
+﻿<Window x:Class="LichVanNien.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="600" Width="943"
+        WindowStyle="None" AllowsTransparency="True"
+        MouseLeftButtonDown="Window_MouseLeftButtonDown" KeyDown="Window_KeyDown" WindowStartupLocation="CenterScreen"
+        >
+    <Window.Background>
+        <ImageBrush ImageSource="Images/background.png"></ImageBrush>
+    </Window.Background>
+    <Grid ShowGridLines="True">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        
+        <Grid Name="grdLeft" ShowGridLines="True">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="350"/>
+                <RowDefinition Height="100" />
+                <RowDefinition Height="21" />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            
+            <Grid ShowGridLines="True" Margin="10 10 0 0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="130"/>
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="90"/>
+                    <ColumnDefinition />
+                    <ColumnDefinition Width="90"/>
+                </Grid.ColumnDefinitions>
+                
+                <TextBlock Grid.Column="1" Text="Thu 4" FontSize="24" Foreground="White" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
+                <Image Grid.Row="1" Source="Images/Prev.png" Height="50" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0 20 0 0"></Image>
+
+                <StackPanel Grid.Row="1"  Grid.Column="1" Orientation="Horizontal" Height="80">
+                    <Image Source="Images/0.png" Height="50"/>
+                </StackPanel>
+                
+                <Image Grid.Row="1"  Grid.Column="2" Source="Images/Next.png" Height="50" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0 20 0 0"></Image>
+            </Grid>
+        </Grid>
+        
+        <Grid Name="grdRight">
+
+        </Grid>
+    </Grid>
+</Window>
